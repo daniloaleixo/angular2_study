@@ -14,7 +14,7 @@ export class CursosComponent implements OnInit {
 
 	constructor(private cursosService: CursosService) {
 		this.nomePortal = "urllll";
-
+		
 		this.cursos = this.cursosService.getCursos();
 
 	}
