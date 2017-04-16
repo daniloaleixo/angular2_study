@@ -14,6 +14,48 @@
 		<br>
 		<img [src]="urlImagem"><span>property-biding</span>
 		<br>
+	</article>
 
+	<article>
+		<h3>Class e Style Bindings</h3>
+		<div>
+			Selecione uma classe:
+			<select #classeSelecionada (change)="0">
+				<option value="alert-success">Sucesso</option>
+				<option value="alert-info">Info</option>
+				<option value="alert-warning">alert</option>
+				<option value="alert-danger">error</option>
+			</select>
+			<br><br>
+
+			<div class="alert {{ classeSelecionada.value }}" role="alert">
+				Texto colorido conforme o valor do combobox
+			</div>
+
+
+			<div class="alert" role="alert" 
+				[class.alert-success]="classeSelecionada.value == 'alert-success'">
+				Sucesso
+			</div>
+			<div class="alert" role="alert"
+				[class.alert-info]="classeSelecionada.value == 'alert-info'">
+				Info
+			</div>
+			<div class="alert" role="alert"
+				[class.alert-warning]="classeSelecionada.value == 'alert-warning'">
+				alert
+			</div>
+			<div class="alert" role="alert"
+				[class.alert-danger]="classeSelecionada.value == 'alert-danger'">
+				error
+			</div>
+
+
+			<div class="alert alert-danger" role="alert"
+				[style.display]="classeSelecionada.value == 'alert-danger' ? 'block' : 'none'">
+				Esse texto so aparece em caso de erro
+			</div>
+
+		</div>
 	</article>
 </section>
