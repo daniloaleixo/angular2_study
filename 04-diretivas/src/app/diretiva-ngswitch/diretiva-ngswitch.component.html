@@ -23,3 +23,23 @@
 	<p *ngSwitchCase="'lista'">Lista ativo</p>
 	<p *ngSwitchDefault>Home</p>
 </div>
+
+<br>
+<br>
+<br>
+
+<h5>Removendo o *</h5>
+
+<div class="container" [ngSwitch]="aba">
+  <template [ngSwitchCase]="'mapa'">
+    <p >Mapa ativo</p>
+  </template>
+  <template [ngSwitchCase]="'lista'">
+    <p >Lista ativo</p>
+  </template>
+  <template [ngSwitchCase]="'home'" ngSwitchDefault>
+    <p>Home</p>
+  </template>
+
+</div>
+
