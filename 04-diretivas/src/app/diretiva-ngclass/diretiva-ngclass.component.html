@@ -1,0 +1,22 @@
+<!-- Porperty binding -->
+<h5>Diretiva Ngclass</h5>
+
+<h1>
+	<i class="glyphicon"
+		[class.glyphicon-star-empty]="!meuFavorito"
+		[class.glyphicon-star]="meuFavorito"
+		(click)="onClick()"
+	></i>
+</h1>
+
+<!-- Class biding -->
+
+<h1>
+	<i class="glyphicon"
+		[ngClass]="{
+			'glyphicon-star-empty': !meuFavorito,
+			'glyphicon-star': meuFavorito
+		}"
+		(click)="onClick()"
+	></i>
+</h1>
