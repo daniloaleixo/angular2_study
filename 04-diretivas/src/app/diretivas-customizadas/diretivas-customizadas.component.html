@@ -13,3 +13,20 @@
 <p [highlight]="'grey'" [highlightColor]="'red'">
 	Texto com highlight com cores customizadas
 </p>
+
+<br>
+<br>
+
+<h5>Diretiva customizada Ng Else</h5>
+
+<div *ngIf="mostrarCursos">
+	Lista de cursos
+</div>
+
+<div *ngElse="mostrarCursos">
+	Não existem cursos para serem listados
+</div>
+
+<br>
+
+<button (click)="onMostrarCursos()">Mostrar ou nao</button>
