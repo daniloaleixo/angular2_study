@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CursosModule } from './cursos/cursos.module';
 import { CursosService } from './cursos/cursos.service';
 import { CriarCursoModule } from './criar-curso/criar-curso.module';
+import { LogService } from './shared/log.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { CriarCursoModule } from './criar-curso/criar-curso.module';
     CriarCursoModule,
     CursosModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
