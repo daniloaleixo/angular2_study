@@ -8,13 +8,15 @@ import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.componen
 import { CamelCasePipe } from './camel-case.pipe';
 import { SettingsService } from './settings.service';
 import { FiltroArrayPipe } from './filtro-array.pipe';
+import { FiltroArrayInpuroPipe } from './filtro-array-inpuro.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExemplosPipesComponent,
     CamelCasePipe,
-    FiltroArrayPipe
+    FiltroArrayPipe,
+    FiltroArrayInpuroPipe
   ],
   imports: [
     BrowserModule,
